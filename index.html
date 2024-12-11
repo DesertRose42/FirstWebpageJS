@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage 2.0</title>
+</head>
+<body>
+
+    <article>
+        <section>
+            <h1>My First Webpage (now with Javascript)</h1>
+            <div>
+                <h2>My Favorite Books</h2>
+                <button onclick="showItems()">Show Favs</button>
+                <ul id="hidden-list" style="display: none;">
+                    <li class="hidden-item">The Last of Us Book Series</li>
+                    <li class="hidden-item">Bone: Out from Boneville</li>
+                    <li class="hidden-item">Clementine Book One Walking Dead Series</li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="para-heading"></h2>
+                <p id="para-body"></p>
+            </div>
+            <button onclick="showDateAndTime()">Show Date and Time</button>
+        </section>
+    </article>
+
+<style>
+
+</style>
+
+<script>
+    function showItems () {
+        document.getElementById("hidden-list").style.display = "block";
+    }
+
+    document.getElementById("para-heading").innerHTML = "A Little About Me"
+    document.getElementById("para-body").innerHTML = "Lorem ipsum dolor sir amet, consectur adipiscing elit. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies. Nullam nec purus nec nunc tincidunt ultricies."
+
+    function showDateAndTime () {
+        document.body.innerHTML += "<div> Today's date and time is" + new Date() + "</div"
+    }
+</script>
+
+</body>
+</html>
